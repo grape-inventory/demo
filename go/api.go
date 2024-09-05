@@ -181,7 +181,6 @@ func (m *Manager) we(f interface{}) (http.HandlerFunc, error) {
 			m.sendJSON(w, r, http.StatusOK, out[0].Interface())
 		} else {
 			w.Header().Add("Content-Type", jsonCT)
-			_, _ = w.Write(emptyJSON)
 		}
 	}, nil
 }
